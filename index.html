@@ -3853,29 +3853,69 @@
     // --- LOGIKA BARU: SYSTEM SETTINGS (KONTROL PANEL) ---
     window.renderSystemSettings = () => {
     try {
-        // Ambil data dari state. Jika kosong, gunakan default agar tidak crash.
         const config = window.appState.systemSettings || {};
         
-        console.log("Rendering System Settings with data:", config); // Cek di console F12
-
+        // --- PERBAIKAN: Masukkan SEMUA ID input ke sini supaya keisi otomatis ---
         const elements = {
             'sysUniqueMode': config.KODE_UNIK_MODE || 'TAMBAH',
             'sysUniqueMax': config.KODE_UNIK_MAX || '500',
             'sysAffLock': config.AFFILIATE_LOCK || 'TRUE',
-            'sysCookieDays': config.AFFILIATE_COOKIE_DURATION || '30'
+            'sysCookieDays': config.AFFILIATE_COOKIE_DURATION || '30',
+            'sysEmailProvider': config.emailProvider || 'NONE',
+            'MAILKETING_TOKEN': config.MAILKETING_TOKEN || '',
+            'MAILKETING_FROM_EMAIL': config.MAILKETING_FROM_EMAIL || '',
+            'MAILKETING_FROM_NAME': config.MAILKETING_FROM_NAME || '',
+            'JOWMAIL_TOKEN': config.JOWMAIL_TOKEN || '',
+            'JOWMAIL_LIST_ID': config.JOWMAIL_LIST_ID || '',
+            'KIRIMEMAIL_AUTH_ID': config.KIRIMEMAIL_AUTH_ID || '',
+            'KIRIMEMAIL_AUTH_TOKEN': config.KIRIMEMAIL_AUTH_TOKEN || '',
+            'KIRIMEMAIL_LIST_ID': config.KIRIMEMAIL_LIST_ID || '',
+            'KIRIMEMAIL_SENDER': config.KIRIMEMAIL_SENDER || '',
+            'SMTP_HOST': config.SMTP_HOST || '',
+            'SMTP_PORT': config.SMTP_PORT || '',
+            'SMTP_USER': config.SMTP_USER || '',
+            'SMTP_PASS': config.SMTP_PASS || '',
+            'sysQrisUrl': config.QRIS_IMAGE_URL || '',
+            'sysAfterBtnText': config.AFTER_CHECKOUT_BTN_TEXT || '',
+            'sysAfterBtnUrl': config.AFTER_CHECKOUT_BTN_URL || ''
         };
 
-        // Looping untuk isi data ke input secara aman
         for (const [id, value] of Object.entries(elements)) {
             const el = document.getElementById(id);
             if (el) {
                 el.value = value;
-            } else {
-                console.warn(`Elemen dengan ID ${id} tidak ditemukan di HTML!`);
             }
         }
+
+        // --- INI PEMICUNYA BIAR DROPDOWN LANGSUNG MUNCULIN FORM ---
+        if (typeof window.toggleEmailForms === 'function') {
+            window.toggleEmailForms();
+        }
+
     } catch (error) {
         console.error("Gagal render System Settings:", error);
+    }
+};
+    // --- FUNGSI UNTUK MUNCULIN FORM SESUAI PILIHAN ---
+window.toggleEmailForms = () => {
+    const providerSelect = document.getElementById('sysEmailProvider');
+    if (!providerSelect) return;
+
+    const val = providerSelect.value;
+    console.log("Switching provider to:", val); // Cek di console F12
+
+    // 1. Sembunyikan SEMUA form email dulu
+    document.querySelectorAll('.email-config-form').forEach(el => {
+        el.classList.add('hidden');
+    });
+
+    // 2. Munculkan form yang ID-nya pas (Contoh: form-KIRIMEMAIL)
+    const targetForm = document.getElementById('form-' + val);
+    if (targetForm) {
+        targetForm.classList.remove('hidden');
+        console.log("Form visible:", 'form-' + val);
+    } else {
+        console.warn("Form tidak ditemukan untuk ID:", 'form-' + val);
     }
 };
     window.saveSystemSettings = async () => {
