@@ -882,31 +882,37 @@
             </div>
 
             <div id="form-MAILKETING" class="email-config-form hidden space-y-4">
-                <input type="text" id="MAILKETING_TOKEN" placeholder="Mailketing API Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="text" id="MAILKETING_FROM_EMAIL" placeholder="Sender Email" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="text" id="MAILKETING_FROM_NAME" placeholder="Sender Name" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-            </div>
+    <input type="text" id="MAILKETING_TOKEN" placeholder="Mailketing API Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="text" id="MAILKETING_FROM_EMAIL" placeholder="Sender Email" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="text" id="MAILKETING_FROM_NAME" placeholder="Sender Name" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+</div>
 
-            <div id="form-JOWMAIL" class="email-config-form hidden space-y-4">
-                <input type="text" id="JOWMAIL_TOKEN" placeholder="Jowmail API Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="text" id="JOWMAIL_LIST_ID" placeholder="List ID" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-            </div>
+<div id="form-JOWMAIL" class="email-config-form hidden space-y-4">
+    <input type="text" id="JOWMAIL_TOKEN" placeholder="Jowmail API Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="text" id="JOWMAIL_LIST_ID" placeholder="List ID" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+</div>
 
-            <div id="form-KIRIMEMAIL" class="email-config-form hidden space-y-4">
-                <input type="text" id="KIRIMEMAIL_AUTH_ID" placeholder="Kirim.Email Auth ID" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="password" id="KIRIMEMAIL_AUTH_TOKEN" placeholder="Kirim.Email Auth Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="text" id="KIRIMEMAIL_LIST_ID" placeholder="List ID (Cth: 24)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-            </div>
+<div id="form-KIRIMEMAIL" class="email-config-form hidden space-y-4">
+    <input type="text" id="KIRIMEMAIL_AUTH_ID" placeholder="Username (Contoh: terrykatar12)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="password" id="KIRIMEMAIL_AUTH_TOKEN" placeholder="REST API Token" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="text" id="KIRIMEMAIL_LIST_ID" placeholder="List ID (Cth: 24)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="text" id="KIRIMEMAIL_SENDER" placeholder="Email Pengirim (Wajib Verified)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-brand/50 rounded-xl outline-none dark:text-white font-bold">
+</div>
 
-            <div id="form-SMTP" class="email-config-form hidden space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="text" id="SMTP_HOST" placeholder="SMTP Host" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                    <input type="number" id="SMTP_PORT" placeholder="Port (465)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                </div>
-                <input type="text" id="SMTP_USER" placeholder="SMTP User" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-                <input type="password" id="SMTP_PASS" placeholder="SMTP Password" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
-            </div>
+<div id="form-SMTP" class="email-config-form hidden space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+        <input type="text" id="SMTP_HOST" placeholder="SMTP Host" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+        <input type="number" id="SMTP_PORT" placeholder="Port (465)" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    </div>
+    <input type="text" id="SMTP_USER" placeholder="SMTP User" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+    <input type="password" id="SMTP_PASS" placeholder="SMTP Password" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 rounded-xl outline-none dark:text-white font-bold">
+</div>
 
+<div class="py-4">
+    <button type="button" onclick="window.testEmailConfig()" class="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-200 rounded-xl text-xs font-bold transition-all border border-slate-200 dark:border-slate-600">
+        <i class="ph ph-paper-plane-tilt"></i> Jalankan Tes Email
+    </button>
+</div>
             <div class="pt-6 border-t border-white/40 dark:border-slate-700/50 space-y-4">
                 <label class="block text-sm font-black text-slate-800 dark:text-white"><i class="ph ph-qr-code"></i> Checkout & Payment Settings</label>
                 <div class="space-y-2">
@@ -3532,6 +3538,7 @@
                                 <div class="mb-6 p-4 bg-white rounded-2xl shadow-inner text-center">
                                     <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Scan QRIS Untuk Bayar</p>
                                     <img src="${qrisUrl}" class="w-full h-auto mx-auto max-w-[250px]" alt="QRIS">
+                                    <a href="${qrisUrl}" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl text-[10px] font-bold transition-all border border-slate-200 no-underline"><i class="ph ph-download-simple"></i> Simpan QRIS</a>
                                 </div>` : ''}
 
                                 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center mb-1">Total Transfer</p>
@@ -3667,6 +3674,7 @@
                 'KIRIMEMAIL_AUTH_ID': config.KIRIMEMAIL_AUTH_ID || '',
                 'KIRIMEMAIL_AUTH_TOKEN': config.KIRIMEMAIL_AUTH_TOKEN || '',
                 'KIRIMEMAIL_LIST_ID': config.KIRIMEMAIL_LIST_ID || '',
+                'KIRIMEMAIL_SENDER': config.KIRIMEMAIL_SENDER || '',
                 'SMTP_HOST': config.SMTP_HOST || '',
                 'SMTP_PORT': config.SMTP_PORT || '',
                 'SMTP_USER': config.SMTP_USER || '',
@@ -3719,6 +3727,7 @@
             KIRIMEMAIL_AUTH_ID: document.getElementById('KIRIMEMAIL_AUTH_ID')?.value || '',
             KIRIMEMAIL_AUTH_TOKEN: document.getElementById('KIRIMEMAIL_AUTH_TOKEN')?.value || '',
             KIRIMEMAIL_LIST_ID: document.getElementById('KIRIMEMAIL_LIST_ID')?.value || '',
+            KIRIMEMAIL_SENDER: document.getElementById('KIRIMEMAIL_SENDER')?.value || '',
             SMTP_HOST: document.getElementById('SMTP_HOST')?.value || '',
             SMTP_PORT: document.getElementById('SMTP_PORT')?.value || '',
             SMTP_USER: document.getElementById('SMTP_USER')?.value || '',
@@ -3746,6 +3755,53 @@
         if(src){ if(l){l.src=src;l.classList.remove('hidden');} } else { if(l){l.src='';l.classList.add('hidden');} } 
     };
 
+   // --- FUNGSI TES EMAIL GLOBAL ---
+    window.testEmailConfig = async () => {
+    const provider = document.getElementById('sysEmailProvider').value;
+    if (provider === 'NONE') return window.showToast("Pilih provider dulu, Bos!", "error");
+
+    const targetEmail = prompt("Kirim email tes ke mana?");
+    if (!targetEmail) return;
+
+    window.showToast("Sedang mengetes " + provider + "...");
+
+    // Payload ini harus sinkron dengan testThirdPartyIntegration(payload) di backend
+    const payload = {
+        action: 'testThirdParty', // Harus sama dengan case di Code.gs baris 325
+        provider: provider.toLowerCase(), // Biar jadi 'mailketing', 'kirimemail' sesuai if di backend
+        test_email: targetEmail, // Backend minta 'test_email'
+        
+        // Ambil data token/id secara dinamis
+        token: document.getElementById(provider + '_TOKEN')?.value || document.getElementById('KIRIMEMAIL_AUTH_TOKEN')?.value || "",
+        auth_id: document.getElementById('KIRIMEMAIL_AUTH_ID')?.value || "",
+        list_id: document.getElementById(provider + '_LIST_ID')?.value || "",
+        
+        // Khusus Mailketing
+        from_email: document.getElementById('MAILKETING_FROM_EMAIL')?.value || "",
+        from_name: document.getElementById('MAILKETING_FROM_NAME')?.value || "Admin",
+        
+        // Khusus Kirim.Email
+        sender_email: document.getElementById('KIRIMEMAIL_SENDER')?.value || "",
+        
+        // Khusus SMTP
+        host: document.getElementById('SMTP_HOST')?.value || "",
+        port: document.getElementById('SMTP_PORT')?.value || "",
+        user: document.getElementById('SMTP_USER')?.value || "",
+        pass: document.getElementById('SMTP_PASS')?.value || ""
+    };
+
+    try {
+        const res = await apiCall('testThirdParty', payload);
+        if (res.success) {
+            window.showToast(res.message, "success");
+        } else {
+            window.showToast(res.message, "error");
+        }
+    } catch (err) {
+        window.showToast("Koneksi gagal: " + err.message, "error");
+    }
+};
+    // --- FUNGSI CHART LO ---
     window.initChart = () => {
         setTimeout(() => {
             const canvas = document.getElementById('salesChart');
